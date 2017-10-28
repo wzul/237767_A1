@@ -21,7 +21,8 @@ public class Path {
      * @return File
      */
     public static String getPath(String folderName) {
-        return Paths.get("").toAbsolutePath().toString() + "\\" + folderName;
+        return System.getProperty("user.dir") + File.separator + folderName;
+        //return Paths.get("").toAbsolutePath().toString() + "\\" + folderName;
     }
 
 }
